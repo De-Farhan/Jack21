@@ -1,0 +1,150 @@
+/* texts variable colors */
+/* background variable colors */
+/* ###################################
+exra small device respnsive here
+###################################### */
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 2rem; }
+
+  h2 {
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 1.25rem; }
+
+  h4 {
+    font-size: 1.25rem; }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600; }
+
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 600; }
+
+  .section-title::before {
+    width: 0; }
+
+  .section-pt {
+    padding-top: 4rem; }
+
+  #navbar {
+    background: rgba(0, 51, 46, 0.8); }
+    #navbar ul {
+      padding: 0.5rem 0; }
+      #navbar ul li {
+        margin-bottom: 0.5rem; }
+        #navbar ul li:last-child {
+          margin-bottom: 0; }
+        #navbar ul li a {
+          margin-left: 1rem; }
+
+  #banner-section .banner-content {
+    padding-left: 1.25rem; }
+    #banner-section .banner-content .banner-title span {
+      font-size: 1.25rem;
+      padding-bottom: 0.5rem; }
+    #banner-section .banner-content .cd-headline {
+      padding: 0.5rem 0; }
+    #banner-section .banner-content .box-btn {
+      margin-top: 1rem; }
+  #banner-section .ani-btn {
+    top: 20px; }
+
+  #about-section .row [class|="col"]:first-child {
+    margin-bottom: 1.5rem; }
+  #about-section .about-text {
+    text-align: center; }
+
+  #skill-section .row [class|="col"]:first-child {
+    margin-bottom: 1.5rem; }
+
+  #port-section .portfolio-controllers [type|="button"] {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem; }
+
+  #counter-section .row [class|="col"] {
+    margin-bottom: 1.5rem; }
+    #counter-section .row [class|="col"]:last-child {
+      margin-bottom: 0; }
+
+  #contact-section .row:last-child [class|="col"]:first-child {
+    margin-bottom: 1.5rem; }
+
+  .to-top-btn {
+    width: 35px;
+    height: 60px; }
+    .to-top-btn i {
+      font-size: 1.25rem; } }
+/* ###################################
+small device respnsive here
+###################################### */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem; }
+
+  h2 {
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 1.25rem; }
+
+  h4 {
+    font-size: 1.25rem; }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600; }
+
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 600; }
+
+  .section-title::before {
+    width: 0; }
+
+  .section-pt {
+    padding-top: 4rem; }
+
+  #navbar {
+    background: rgba(0, 51, 46, 0.8); }
+    #navbar ul {
+      padding: 0.5rem 0; }
+      #navbar ul li {
+        margin-bottom: 0.5rem; }
+        #navbar ul li:last-child {
+          margin-bottom: 0; }
+        #navbar ul li a {
+          margin-left: 1rem; }
+
+  .to-top-btn {
+    width: 35px;
+    height: 60px; }
+    .to-top-btn i {
+      font-size: 1.25rem; } }
+/* ###################################
+medium device respnsive here
+###################################### */
+@media screen and (max-width: 991px) {
+  #navbar {
+    background: rgba(0, 51, 46, 0.8); }
+    #navbar ul {
+      padding: 0.5rem 0; }
+      #navbar ul li {
+        margin-bottom: 1rem; }
+        #navbar ul li:last-child {
+          margin-bottom: 0; }
+        #navbar ul li a {
+          margin-left: 1rem; }
+
+  .to-top-btn {
+    width: 35px;
+    height: 60px; }
+    .to-top-btn i {
+      font-size: 1.25rem; } }
+
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,1053 @@
+/*
+############# ::: INDEX OF CSS ::: #############
+::: 1.0 global variable define css
+::: 2.0 common css
+::: 3.0 header section
+::: 4.0 banner section
+::: 5.0 about section
+::: 6.0 skill section
+::: 7.0 portfolio section
+::: 8.0 counter section
+::: 9.0 testimonial section
+::: 10.0 blog section
+::: 11.0 contact section
+::: 12.0 footer section
+############### :::   *****   ::: ############## */
+
+/* ###################################
+::: 1.0 global variable define css
+###################################### */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ###################################
+::: 2.0 common css
+###################################### */
+/* texts variable colors */
+$text-white: #ffffff;
+$text-white-shade: #eeeeee;
+$text-black: #262626;
+$text-bnad-color: #009688;
+$text-band-dark-color: #004a43;
+/* background variable colors */
+$bg-white: #ffffff;
+$bg-white-shade: #e6e6e6;
+$bg-gray: #ccc;
+$bg-black: #262626;
+$bg-band-color: #009688;
+$bg-band-dark-color: #00332e;
+$bg-section-color: rgba(241, 241, 241, 0.8);
+$linear-gradient: linear-gradient(
+  to bottom,
+  rgba(0, 150, 135, 0.4),
+  rgba(0, 0, 0, 0.4)
+);
+$box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+/* common css */
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7rem;
+  background: $bg-white;
+  color: $text-black;
+  font-family: "Titillium Web", sans-serif;
+}
+section {
+  position: relative;
+  overflow: hidden;
+}
+a,
+a:hover,
+a:focus {
+  color: $text-bnad-color;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.5s linear;
+}
+button,
+button:hover,
+button:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  transition: all 0.5s linear;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+::selection {
+  color: $text-black;
+  background: $bg-gray;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-black;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 3rem;
+  // letter-spacing: ;
+}
+h2 {
+  font-size: 2rem;
+  // letter-spacing: ;
+}
+h3 {
+  font-size: 1.5rem;
+  // letter-spacing: ;
+}
+h4 {
+  font-size: 1.25rem;
+  // letter-spacing: ;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  // letter-spacing: ;
+}
+h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  // letter-spacing: ;
+}
+p {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.box-btn {
+  transition: all 0.5s linear;
+  a {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-white;
+    background: $bg-band-color;
+    border: 1px solid $bg-white;
+    padding: 0.5rem 1.5rem;
+    text-transform: capitalize;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    i {
+      position: relative;
+      left: -2rem;
+      opacity: 0;
+      width: 0;
+      transition: all 0.5s linear;
+    }
+    &:hover {
+      color: $text-black;
+      background: $bg-white-shade;
+      border: 1px solid $bg-band-color;
+      i {
+        left: 0;
+        opacity: 1;
+        width: 1.5rem;
+        color: $bg-band-color;
+      }
+    }
+  }
+}
+.round-btn {
+  i {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: $bg-band-color;
+    color: $text-white;
+    border-radius: 50%;
+  }
+}
+.icon-box-btn {
+  i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $bg-band-color;
+    color: $text-white;
+    border: 1px solid $bg-white;
+    border-radius: 0;
+    margin-right: 1rem;
+    transform: rotate(0deg);
+    transition: all 0.5s linear;
+    &:hover {
+      color: $text-black;
+      background: $bg-white-shade;
+      border: 1px solid $bg-band-color;
+    }
+  }
+}
+.section-title {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    width: 2px;
+    background: $bg-band-color;
+  }
+  .title-header {
+    color: $text-white;
+    background: $bg-band-color;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    padding-bottom: 0.2rem;
+  }
+  .sub-title {
+    color: $text-black;
+    font-weight: 500;
+  }
+}
+.section-pt {
+  padding-top: 7.5rem;
+}
+.swiper-pagination {
+  bottom: -0.6rem;
+  .swiper-pagination-bullet {
+    background: $bg-black;
+    transform: scale(1);
+  }
+  .swiper-pagination-bullet-active {
+    background: $bg-band-color;
+    transform: scale(1.3);
+  }
+}
+/* ###################################
+::: 3.0 header section
+###################################### */
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+  background: transparent;
+  transition: all 0.5s linear;
+  .navbar-toggler {
+    padding: 0;
+    border: 0;
+    &:focus {
+      box-shadow: none;
+    }
+    .navbar-toggler-icon {
+      .line {
+        width: 1.75rem;
+        height: 2px;
+        background: $text-bnad-color;
+        margin-bottom: 8px;
+        transition: all 0.5s linear;
+      }
+      .bar-1 {
+        transform: rotate(0deg);
+        transform-origin: inherit;
+      }
+      .bar-2 {
+        opacity: 1;
+      }
+      .bar-3 {
+        transform: rotate(0deg);
+        transform-origin: inherit;
+        margin-bottom: 0px;
+      }
+    }
+    .show-icon {
+      .bar-1 {
+        transform: rotate(45deg);
+        transform-origin: -3px 10px;
+      }
+      .bar-2 {
+        opacity: 0;
+      }
+      .bar-3 {
+        transform: rotate(-45deg);
+        transform-origin: 7px -3px;
+      }
+    }
+  }
+  .navbar-collapse {
+    display: none;
+  }
+  ul {
+    li {
+      a {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $text-white;
+        text-transform: uppercase;
+        padding: 0;
+        margin-left: 2rem;
+        position: relative;
+        transition: all 0.5s linear;
+        &:hover {
+          color: $text-bnad-color;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -1rem;
+          transform: translateY(-50%);
+          height: 1.75rem;
+          width: 2px;
+          background: $bg-white;
+          transition: all 0.5s linear;
+        }
+        &:hover::before {
+          top: 100%;
+          height: 2px;
+          width: 2.5rem;
+          background: $bg-band-color;
+        }
+      }
+      .active {
+        color: $text-bnad-color;
+        &::before {
+          top: 100%;
+          height: 2px;
+          width: 2.5rem;
+          background: $bg-band-color;
+        }
+      }
+    }
+  }
+}
+#navbar.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: $bg-band-dark-color;
+  z-index: 9999;
+  animation: move-in 1s ease;
+  @keyframes move-in {
+    0% {
+      top: -2rem;
+    }
+    100% {
+      top: 0;
+    }
+  }
+}
+
+/* ###################################
+::: 4.0 banner section
+###################################### */
+#banner-section {
+  background: url(../image/banner-img.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  .banner-overlay {
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: $linear-gradient;
+    }
+    .banner-content {
+      position: relative;
+      .banner-title {
+        span {
+          display: block;
+          font-size: 1.5rem;
+          color: $bg-white;
+          text-transform: capitalize;
+          letter-spacing: initial;
+        }
+        color: $bg-band-color;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+      }
+      .cd-headline {
+        margin: 0;
+        color: $bg-white;
+        .me {
+          font-weight: 400;
+        }
+      }
+      .clip {
+        span {
+          padding: 0.5rem 0;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .cd-words-wrapper {
+          display: inline-block;
+          position: relative;
+          text-align: left;
+          color: $bg-band-color;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 60%;
+            background: $bg-band-color;
+          }
+          b {
+            opacity: 0;
+            display: inline-block;
+            position: absolute;
+            white-space: nowrap;
+            left: 0;
+            top: 0;
+          }
+          .is-visible {
+            position: relative;
+            opacity: 1;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 9.25rem;
+        width: 2px;
+        background: $bg-white;
+      }
+    }
+    .ani-btn {
+      position: relative;
+      i {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) rotate(135deg);
+        font-size: 2rem;
+        color: $bg-white-shade;
+        animation: my-ani 2s infinite;
+      }
+      @keyframes my-ani {
+        0% {
+          top: 0px;
+        }
+        50% {
+          top: 1rem;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* ###################################
+::: 5.0 about section
+###################################### */
+#about-section {
+  .about-img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid $bg-band-color;
+    overflow: hidden;
+    position: relative;
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: $linear-gradient;
+      opacity: 0;
+      transition: all 0.5s linear;
+      .icon-box-btn {
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.5s linear 0.7s;
+        i {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    &:hover {
+      .img-overlay {
+        opacity: 1;
+        .icon-box-btn {
+          left: 1.5rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* ###################################
+::: 6.0 skill section
+###################################### */
+#skill-section {
+  .skill-overlay {
+    background: $bg-section-color;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      transform: translateY(-50%);
+      width: 6rem;
+      height: 6rem;
+      background: $bg-band-color;
+      clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+      );
+      z-index: -9;
+      animation: round-move 10s ease-in infinite;
+      @keyframes round-move {
+        0% {
+          left: 3%;
+        }
+        25% {
+          left: 7%;
+          top: 50%;
+        }
+        50% {
+          left: 7%;
+          top: 57%;
+        }
+        75% {
+          left: 7%;
+          top: 50%;
+        }
+        100% {
+          left: 3%;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(30%, -30%);
+      width: 6rem;
+      height: 6rem;
+      background: $bg-band-color;
+      clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+      );
+      z-index: -9;
+    }
+    .progress-wrapper {
+      .progress {
+        width: 100%;
+        background: $bg-gray;
+      }
+      .progress .tip {
+        width: 2rem;
+        text-align: center;
+        align-self: center;
+        background: $bg-band-color;
+        color: $text-white;
+        font-weight: bold;
+      }
+    }
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .price-img {
+            height: auto;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.3);
+            }
+            .img-text {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 100%;
+              height: auto;
+              transform: translate(-50%, -50%);
+              h3,
+              p {
+                color: $text-white;
+              }
+            }
+            .img-overlay {
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: $bg-band-color;
+              opacity: 0;
+              transition: all 0.5s linear;
+              .round-btn {
+                i {
+                  background: $bg-white-shade;
+                  color: $text-bnad-color;
+                }
+              }
+              .overlay-body {
+                .price-box {
+                  background: $bg-white-shade;
+                  .dollar {
+                    color: $text-bnad-color;
+                  }
+                }
+              }
+            }
+            &:hover {
+              .img-overlay {
+                opacity: 1;
+                left: 0%;
+              }
+            }
+          }
+        }
+      }
+      .swiper-pagination {
+        bottom: -0.6rem;
+      }
+    }
+  }
+}
+
+/* ###################################
+::: 7.0 portfolio section
+###################################### */
+#port-section {
+  .portfolio-controllers {
+    .active-work {
+      background: $bg-white-shade !important;
+      color: $text-bnad-color;
+    }
+    [type|="button"] {
+      background: transparent;
+      padding: 0.25rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-right: 1rem;
+      &:hover {
+        background: $bg-white-shade;
+        color: $text-bnad-color;
+      }
+    }
+  }
+  .portfolios {
+    .portfolio-image {
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .caption {
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        background: $bg-band-color;
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        transition: all 0.5s linear;
+        .caption-content {
+          text-align: center;
+          h3 {
+            color: $text-white;
+            margin-bottom: 1rem;
+          }
+          ul {
+            li {
+              display: inline-block;
+              i {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+                background: $bg-white;
+                color: $bg-band-color;
+                text-align: center;
+                margin-right: 1rem;
+                transition: all 0.5s linear;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .caption {
+          opacity: 1;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* ###################################
+::: 8.0 counter section
+###################################### */
+#counter-section {
+  .counter-wrapper {
+    background: $bg-section-color;
+  }
+  .counter-content {
+    .counter-subtitle {
+      font-weight: 500;
+    }
+  }
+}
+
+/* ###################################
+::: 9.0 testimonial section
+###################################### */
+#testi-section {
+  .swiper {
+    padding-top: 3.5rem !important;
+    .swiper-wrapper {
+      .swiper-slide {
+        .testi-card {
+          background: $bg-white-shade;
+          box-shadow: $box-shadow;
+          position: relative;
+          opacity: 0.3;
+          .rate-icon {
+            i {
+              color: $text-bnad-color;
+            }
+          }
+          .testi-header-img {
+            width: 20%;
+            position: absolute;
+            top: 0;
+            left: 80%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            opacity: 0;
+          }
+        }
+      }
+      .swiper-slide-active {
+        .testi-card {
+          opacity: 1;
+          .testi-header-img {
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(315deg);
+            opacity: 1;
+            transition: all 0.5s linear;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: 0.25rem;
+    }
+  }
+}
+
+/* ###################################
+::: 10.0 blog section
+###################################### */
+#blog-section {
+  .blog-wrapper {
+    background: $bg-section-color;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      transform: translateY(-50%);
+      width: 6rem;
+      height: 6rem;
+      background: $bg-band-color;
+      clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+      );
+      z-index: -9;
+      animation: round-move 10s ease-in infinite;
+      @keyframes round-move {
+        0% {
+          left: 3%;
+        }
+        25% {
+          left: 7%;
+          top: 50%;
+        }
+        50% {
+          left: 7%;
+          top: 57%;
+        }
+        75% {
+          left: 7%;
+          top: 50%;
+        }
+        100% {
+          left: 3%;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(30%, -30%);
+      width: 6rem;
+      height: 6rem;
+      background: $bg-band-color;
+      clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        75% 100%,
+        25% 100%,
+        0% 60%,
+        10% 20%
+      );
+      z-index: -9;
+    }
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .blog-card {
+            box-shadow: $box-shadow;
+            .blog-card-header {
+              transition: all 0.5s linear;
+              position: relative;
+              .img {
+                overflow: hidden;
+                img {
+                  transform: scale(1);
+                  transition: all 0.5s linear 1s;
+                }
+              }
+              .box-btn {
+                position: absolute;
+                bottom: 0;
+                left: 1rem;
+                transform: translateY(50%);
+                a {
+                  display: block;
+                  padding: 0.1rem 1rem !important;
+                  font-size: 1rem;
+                  box-shadow: $box-shadow;
+                  &:hover {
+                    color: $text-black;
+                  }
+                }
+              }
+            }
+            .blog-card-body {
+              h4,
+              h5 {
+                transition: all 0.5s linear;
+                &:hover {
+                  color: $text-bnad-color;
+                }
+              }
+            }
+            &:hover {
+              .blog-card-header {
+                .img {
+                  img {
+                    transform: scale(1.3);
+                    transition: all 0.5s linear 0s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .swiper-pagination {
+        bottom: -0.5rem;
+      }
+    }
+  }
+}
+
+/* ###################################
+::: 11.0 contact section
+###################################### */
+#contact-section {
+  .contact-form {
+    form {
+      input[type|="text"],
+      input[type|="email"],
+      input[type|="button"],
+      textarea {
+        width: 100%;
+        height: 40px;
+        padding: 0 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid $bg-gray;
+        transition: all 0.5s linear;
+        &:focus {
+          outline: none;
+          border: 1px solid $bg-band-color;
+        }
+      }
+      #textarea {
+        height: 150px;
+        resize: none;
+      }
+      #button {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $text-white;
+        background: $bg-band-color;
+        border: 1px solid $bg-white;
+        padding: 0.5rem 1.5rem;
+        text-transform: capitalize;
+        overflow: hidden;
+        transition: all 0.5s linear;
+        i {
+          position: relative;
+          left: -2rem;
+          opacity: 0;
+          width: 0;
+          transition: all 0.5s linear;
+        }
+        &:hover {
+          color: $text-black;
+          background: $bg-white-shade;
+          border: 1px solid $bg-band-color;
+          i {
+            left: 0;
+            opacity: 1;
+            width: 1.5rem;
+            color: $bg-band-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*########### to top button ###########*/
+.to-top-btn {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 70px;
+  background: $bg-band-color;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s linear;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $text-white;
+    animation: to-top-ani 2s ease-in-out infinite;
+    @keyframes to-top-ani {
+      0% {
+        top: 40%;
+      }
+      50% {
+        top: 60%;
+      }
+      100% {
+        top: 40%;
+      }
+    }
+  }
+}
+.to-top-fixed {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  opacity: 1;
+  z-index: 999;
+}
+
+/* ###################################
+::: 12.0 footer section
+###################################### */
+#footer-section {
+  .footer-wrapper {
+    background: $bg-band-dark-color;
+    .footer-logo {
+      width: auto;
+    }
+    .copyright {
+      color: $text-white;
+      span {
+        color: $text-bnad-color;
+      }
+    }
+  }
+}

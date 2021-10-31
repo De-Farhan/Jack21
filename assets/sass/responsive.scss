@@ -1,0 +1,264 @@
+/* texts variable colors */
+$text-white: #ffffff;
+$text-white-shade: #eeeeee;
+$text-black: #262626;
+$text-bnad-color: #009688;
+$text-band-dark-color: #004a43;
+/* background variable colors */
+$bg-white: #ffffff;
+$bg-white-shade: #e6e6e6;
+$bg-gray: #ccc;
+$bg-black: #262626;
+$bg-band-color: #009688;
+$bg-band-dark-color: #00332e;
+$bg-section-color: rgba(241, 241, 241, 0.8);
+$linear-gradient: linear-gradient(
+  to bottom,
+  rgba(0, 150, 135, 0.4),
+  rgba(0, 0, 0, 0.4)
+);
+$box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+/* ###################################
+exra small device respnsive here
+###################################### */
+@media screen and (max-width: 575px) {
+  // common css here
+  h1 {
+    font-size: 2rem;
+    // letter-spacing: ;
+  }
+  h2 {
+    font-size: 1.5rem;
+    // letter-spacing: ;
+  }
+  h3 {
+    font-size: 1.25rem;
+    // letter-spacing: ;
+  }
+  h4 {
+    font-size: 1.25rem;
+    // letter-spacing: ;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    // letter-spacing: ;
+  }
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    // letter-spacing: ;
+  }
+  .section-title {
+    &::before {
+      width: 0;
+    }
+  }
+
+  .section-pt {
+    padding-top: 4rem;
+  }
+
+  // ::: 3.0 header section responsive here
+  #navbar {
+    background: rgba(0, 51, 46, 0.8);
+    ul {
+      padding: 0.5rem 0;
+      li {
+        margin-bottom: 0.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  // ::: 4.0 banner section
+  #banner-section {
+    .banner-content {
+      padding-left: 1.25rem;
+      .banner-title {
+        span {
+          font-size: 1.25rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+      .cd-headline {
+        padding: 0.5rem 0;
+      }
+      .box-btn {
+        margin-top: 1rem;
+      }
+    }
+    .ani-btn {
+      top: 20px;
+    }
+  }
+  // ::: 5.0 about section
+  #about-section {
+    .row {
+      [class|="col"] {
+        &:first-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    .about-text {
+      text-align: center;
+    }
+  }
+  // ::: 6.0 skill section
+  #skill-section {
+    .row {
+      [class|="col"] {
+        &:first-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  // ::: 7.0 portfolio section
+  #port-section {
+    .portfolio-controllers {
+      [type|="button"] {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  //  ::: 8.0 counter section
+  #counter-section {
+    .row {
+      [class|="col"] {
+        margin-bottom: 1.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  // ::: 11.0 contact section
+  #contact-section {
+    .row {
+      &:last-child {
+        [class|="col"] {
+          &:first-child {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  // to top button
+  .to-top-btn {
+    width: 35px;
+    height: 60px;
+    i {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* ###################################
+small device respnsive here
+###################################### */
+@media screen and (max-width: 767px) {
+  // common css here
+  h1 {
+    font-size: 2rem;
+    // letter-spacing: ;
+  }
+  h2 {
+    font-size: 1.5rem;
+    // letter-spacing: ;
+  }
+  h3 {
+    font-size: 1.25rem;
+    // letter-spacing: ;
+  }
+  h4 {
+    font-size: 1.25rem;
+    // letter-spacing: ;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    // letter-spacing: ;
+  }
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    // letter-spacing: ;
+  }
+  .section-title {
+    &::before {
+      width: 0;
+    }
+  }
+
+  .section-pt {
+    padding-top: 4rem;
+  }
+
+  // ::: 3.0 header section responsive here
+  #navbar {
+    background: rgba(0, 51, 46, 0.8);
+    ul {
+      padding: 0.5rem 0;
+      li {
+        margin-bottom: 0.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  // to top button
+  .to-top-btn {
+    width: 35px;
+    height: 60px;
+    i {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* ###################################
+medium device respnsive here
+###################################### */
+@media screen and (max-width: 991px) {
+  // ::: 3.0 header section responsive here
+  #navbar {
+    background: rgba(0, 51, 46, 0.8);
+    ul {
+      padding: 0.5rem 0;
+      li {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  // to top button
+  .to-top-btn {
+    width: 35px;
+    height: 60px;
+    i {
+      font-size: 1.25rem;
+    }
+  }
+}

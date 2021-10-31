@@ -1,0 +1,259 @@
+/*
+############# ::: INDEX OF CSS ::: #############
+::: 2.0 common css
+::: 3.0 header section
+::: 4.0 banner section
+::: 5.0 about section
+::: 6.0 skill section
+::: 7.0 portfolio section
+::: 8.0 counter section
+::: 9.0 testimonial section
+::: 10.0 blog section
+::: 11.0 contact section
+::: 12.0 footer section
+############### :::   *****   ::: ############## */
+
+:root {
+  /* texts variable colors */
+  --text-white: #ffffff;
+  --text-white-shade: #eeeeee;
+  --text-black: #262626;
+  --text-bnad-color: #4775d1;
+  --text-band-dark-color: #050a14;
+  /* background variable colors */
+  --bg-white: #ffffff;
+  --bg-white-shade: #e6e6e6;
+  --bg-gray: #ccc;
+  --bg-black: #262626;
+  --bg-band-color: #4775d1;
+  --bg-band-dark-color: #050a14;
+  --bg-navbar-color: rgba(5, 10, 20, 0.8);
+  --bg-section-color: rgba(241, 241, 241, 0.8);
+  --bg-extra-color: #ff584d;
+  --linear-gradient: linear-gradient(
+    to bottom,
+    rgba(71, 117, 209, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  --box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+    0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* ###################################
+    ::: 2.0 common css
+    ###################################### */
+
+::selection {
+  background-color: var(--bg-gray) !important;
+}
+.box-btn a {
+  background: var(--bg-band-color) !important;
+}
+.box-btn a:hover {
+  border: 1px solid var(--bg-band-color) !important;
+  background: var(--bg-white-shade) !important;
+}
+.box-btn i {
+  color: var(--text-bnad-color) !important;
+}
+.round-btn i {
+  background: var(--bg-band-color) !important;
+}
+.icon-box-btn i {
+  background: var(--bg-band-color) !important;
+}
+.icon-box-btn i:hover {
+  background: var(--bg-white-shade) !important;
+  border: 1px solid var(--bg-band-color) !important;
+}
+.section-title::before {
+  background: var(--bg-band-color) !important;
+}
+.section-title .title-header {
+  background: var(--bg-band-color) !important;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--bg-band-color) !important;
+}
+
+/* ###################################
+    ::: 3.0 header section
+    ###################################### */
+#navbar ul li a:hover {
+  color: var(--text-bnad-color) !important;
+}
+#navbar ul li a.active {
+  color: var(--text-bnad-color) !important;
+}
+#navbar ul li a.active::before {
+  background: var(--bg-band-color) !important;
+}
+#navbar ul li a:before {
+  background: var(--bg-white);
+}
+#navbar ul li a:hover:before {
+  background: var(--bg-band-color) !important;
+}
+#navbar .navbar-toggler .navbar-toggler-icon .line {
+  background: var(--bg-band-color) !important;
+}
+#navbar.fixed-nav {
+  background: var(--bg-band-dark-color) !important;
+}
+@media screen and (max-width: 575px) {
+  #navbar {
+    background: var(--bg-navbar-color) !important;
+  }
+  #navbar.fixed-nav {
+    background: var(--bg-band-dark-color) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #navbar {
+    background: var(--bg-navbar-color) !important;
+  }
+  #navbar.fixed-nav {
+    background: var(--bg-band-dark-color) !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  #navbar {
+    background: var(--bg-navbar-color) !important;
+  }
+  #navbar.fixed-nav {
+    background: var(--bg-band-dark-color) !important;
+  }
+}
+/* ###################################
+    ::: 4.0 banner section
+    ###################################### */
+#banner-section .banner-overlay::before {
+  background-image: var(--linear-gradient) !important;
+}
+#banner-section .banner-overlay .banner-title {
+  color: var(--text-bnad-color) !important;
+}
+#banner-section .banner-overlay .banner-content .clip .cd-words-wrapper {
+  color: var(--text-bnad-color) !important;
+}
+#banner-section .banner-overlay .banner-content .clip .cd-words-wrapper::after {
+  background: var(--bg-band-color) !important;
+}
+
+/* ###################################
+    ::: 5.0 about section
+    ###################################### */
+#about-section .about-img {
+  border: 2px solid var(--bg-band-color) !important;
+}
+#about-section .about-img .img-overlay {
+  background-image: var(--linear-gradient) !important;
+}
+/* ###################################
+    ::: 6.0 skill section
+    ###################################### */
+#skill-section .skill-overlay::before,
+#skill-section .skill-overlay::after {
+  background: var(--bg-band-color) !important;
+}
+#skill-section .skill-overlay .swiper .price-img .img-overlay {
+  background: var(--bg-band-color) !important;
+}
+#skill-section .skill-overlay .swiper .price-img .img-overlay .round-btn i {
+  color: var(--text-bnad-color) !important;
+  background: var(--bg-white-shade) !important;
+}
+#skill-section
+  .skill-overlay
+  .swiper
+  .price-img
+  .img-overlay
+  .price-box
+  .dollar {
+  color: var(--text-bnad-color) !important;
+}
+
+/* ###################################
+    ::: 7.0 portfolio section
+    ###################################### */
+#port-section .portfolio-controllers .active-work {
+  color: var(--text-bnad-color) !important;
+}
+#port-section .portfolio-controllers [type|="button"]:hover {
+  color: var(--text-bnad-color) !important;
+}
+#port-section .portfolios .caption {
+  background: var(--bg-band-color) !important;
+}
+#port-section .portfolios .caption .caption-content ul li i {
+  color: var(--text-bnad-color) !important;
+}
+.vbox-overlay .vbox-close:hover {
+  color: var(--text-bnad-color) !important;
+}
+.vbox-overlay .vbox-next span:hover,
+.vbox-overlay .vbox-prev span:hover {
+  border-top-color: var(--bg-band-color) !important;
+  border-right-color: var(--bg-band-color) !important;
+}
+
+/* ###################################
+    ::: 9.0 testimonial section
+    ###################################### */
+#testi-section .swiper .testi-card .rate-icon i {
+  color: var(--text-bnad-color) !important;
+}
+
+/* ###################################
+    ::: 10.0 blog section
+    ###################################### */
+#blog-section
+  .blog-wrapper
+  .swiper
+  .swiper-slide
+  .blog-card
+  .blog-card-body
+  h4:hover,
+#blog-section
+  .blog-wrapper
+  .swiper
+  .swiper-slide
+  .blog-card
+  .blog-card-body
+  h5:hover {
+  color: var(--text-bnad-color) !important;
+}
+
+/* ###################################
+    ::: 11.0 contact section
+    ###################################### */
+#contact-section form #name:focus,
+#contact-section form #email:focus,
+#contact-section form #textarea:focus {
+  border: 1px solid var(--bg-band-color) !important;
+}
+#contact-section form #button:hover {
+  border: 1px solid var(--bg-band-color) !important;
+}
+#contact-section form #button {
+  background: var(--bg-band-color) !important;
+}
+#contact-section form #button:hover {
+  background: var(--bg-white-shade) !important;
+}
+#contact-section form #button i {
+  color: var(--text-bnad-color) !important;
+}
+/* to top button color */
+.to-top-btn {
+  background: var(--bg-extra-color) !important;
+}
+
+/* ###################################
+    ::: 12.0 footer section
+    ###################################### */
+#footer-section .footer-wrapper {
+  background: var(--bg-band-dark-color) !important;
+}
+#footer-section .copyright span {
+  color: var(--text-bnad-color) !important;
+}
